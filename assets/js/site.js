@@ -112,12 +112,97 @@
     $('#searchInput').addEventListener('input',e=>{term=e.target.value.trim().toLowerCase();draw();});draw();hydrateMedia();
   }
   const formatTime=s=>{if(!Number.isFinite(s))return '0:00';let m=Math.floor(s/60),sec=Math.floor(s%60);return `${m}:${String(sec).padStart(2,'0')}`;};
+  const isAudioPath=x=>typeof x==='string'&&/^(media\/uploads\/|assets\/audio\/|https?:\/\/)/i.test(x)&&!x.split('/').includes('..');
+  let player;
+  function initPlayer(){
+    const dock=$('#audioDock')||document.createElement('div');
+    dock.className='audio-dock';dock.id='audioDock';dock.hidden=true;
+    dock.setAttribute('role','region');dock.setAttribute('aria-label','Reproductor de música');
+    dock.innerHTML=`<img id="playerCover" src="assets/images/cover-hexiza-force-2.jpg" alt="Carátula"><div class="audio-now"><small>REPRODUCIENDO</small><strong id="playerTitle">SIN REPRODUCCIÓN</strong></div><button class="dock-btn" id="audioPrev" type="button" aria-label="Anterior">◀◀</button><button class="dock-btn big" id="audioPlay" type="button" aria-label="Reproducir">▶</button><button class="dock-btn" id="audioNext" type="button" aria-label="Siguiente">▶▶</button><span id="audioTime" class="audio-time">0:00</span><input type="range" id="audioSeek" min="0" max="1000" value="0" aria-label="Posición de la canción"><span id="audioDuration" class="audio-time">0:00</span><input type="range" id="audioVolume" min="0" max="100" value="80" aria-label="Volumen"><audio id="audioElement" preload="metadata"></audio>`;
+    document.body.append(dock);
+    const audio=$('#audioElement');
+    let playingAlbum=null,current=-1,request=0;
+    function sync(){
+      const sameAlbum=playingAlbum?.id===document.body.dataset.albumId;
+      document.querySelectorAll('.track-row').forEach(row=>row.classList.toggle('playing',sameAlbum&&Number(row.dataset.index)===current));
+      document.querySelectorAll('.track-play').forEach(button=>{
+        const active=sameAlbum&&Number(button.dataset.play)===current&&!audio.paused;
+        button.textContent=active?'Ⅱ':'▶';
+        const title=button.closest('.track-row').querySelector('.track-title').textContent;
+        button.setAttribute('aria-label',`${active?'Pausar':'Reproducir'} ${title}`);
+      });
+      $('#audioPlay').textContent=audio.paused?'▶':'Ⅱ';
+      $('#audioPlay').setAttribute('aria-label',audio.paused?'Reproducir':'Pausar');
+    }
+    function toggle(){
+      if(current<0)return;
+      if(audio.paused)audio.play().catch(()=>toast('No se pudo reanudar el audio.'));
+      else audio.pause();
+    }
+    async function load(album,index){
+      const track=album.tracks?.[index];
+      if(!track||!isAudioPath(track.audio)){toast('Esta canción todavía no tiene un archivo de audio cargado.');return;}
+      const token=++request,src=await resolveMedia(track.audio);
+      if(token!==request)return;
+      if(!src||src.startsWith('media/uploads/')){toast('Archivo de audio no disponible: revisa la carga.');return;}
+      playingAlbum=album;current=index;audio.src=src;dock.hidden=false;
+      $('#playerTitle').textContent=track.title;
+      $('#playerCover').dataset.media=album.cover;
+      resolveMedia(album.cover).then(cover=>{if(token===request)$('#playerCover').src=cover;});
+      $('#audioTime').textContent='0:00';$('#audioDuration').textContent='0:00';
+      $('#audioSeek').value='0';$('#audioSeek').style.setProperty('--fill','0%');
+      sync();
+      try{await audio.play();}catch{if(token===request)toast('No fue posible reproducir el audio. Comprueba el archivo o el servidor.');}
+      if(token===request)sync();
+    }
+    function playTrack(album,index){
+      if(playingAlbum?.id===album.id&&current===index){toggle();return;}
+      return load(album,index);
+    }
+    function playAlbum(album){
+      if(playingAlbum?.id===album.id&&current>=0){toggle();return;}
+      const index=(album.tracks||[]).findIndex(track=>isAudioPath(track.audio));
+      if(index>=0)return load(album,index);
+    }
+    function skip(direction){
+      const tracks=playingAlbum?.tracks||[];
+      for(let i=1;i<=tracks.length;i++){
+        const index=(current+direction*i+tracks.length)%tracks.length;
+        if(isAudioPath(tracks[index].audio)){load(playingAlbum,index);return;}
+      }
+    }
+    $('#audioPrev').addEventListener('click',()=>skip(-1));
+    $('#audioNext').addEventListener('click',()=>skip(1));
+    $('#audioPlay').addEventListener('click',toggle);
+    audio.addEventListener('play',sync);audio.addEventListener('pause',sync);
+    audio.addEventListener('ended',()=>{
+      const tracks=playingAlbum?.tracks||[];
+      let index=current+1;while(index<tracks.length&&!isAudioPath(tracks[index].audio))index++;
+      if(index<tracks.length)load(playingAlbum,index);else sync();
+    });
+    audio.addEventListener('timeupdate',()=>{
+      $('#audioTime').textContent=formatTime(audio.currentTime);
+      if(Number.isFinite(audio.duration)&&audio.duration>0){
+        $('#audioSeek').value=String(Math.floor(1000*audio.currentTime/audio.duration));
+        $('#audioSeek').style.setProperty('--fill',`${Math.floor(100*audio.currentTime/audio.duration)}%`);
+      }
+    });
+    audio.addEventListener('loadedmetadata',()=>$('#audioDuration').textContent=formatTime(audio.duration));
+    audio.addEventListener('error',()=>toast('El audio no se encontró. Revisa la ruta del archivo.'));
+    $('#audioSeek').addEventListener('input',e=>{if(Number.isFinite(audio.duration))audio.currentTime=audio.duration*Number(e.target.value)/1000;});
+    $('#audioVolume').addEventListener('input',e=>audio.volume=Number(e.target.value)/100);audio.volume=.8;
+    document.addEventListener('keydown',e=>{
+      const active=document.activeElement;
+      if(!['INPUT','TEXTAREA','SELECT','BUTTON'].includes(active?.tagName)&&!active?.isContentEditable&&!(e.ctrlKey||e.metaKey||e.altKey)&&e.code==='Space'&&current>=0){e.preventDefault();toggle();}
+    });
+    return {playTrack,playAlbum,sync};
+  }
   function renderAlbum(){
     const id=new URLSearchParams(location.search).get('id'), albums=data.albums||[];
     const album=albums.find(a=>a.id===id)||albums[0];
     if(!album){document.querySelector('main').innerHTML='<div class="wrap section"><h1>NO HAY ÁLBUMES TODAVÍA</h1><a href="index.html">Volver al inicio</a></div>';return;}
     const tracks=album.tracks||[];
-    const isAudioPath=x=>typeof x==='string'&&/^(media\/uploads\/|assets\/audio\/|https?:\/\/)/i.test(x)&&!x.split('/').includes('..');
+    document.body.dataset.albumId=album.id;
     const isDownloadPath=x=>typeof x==='string'&&/^(media\/uploads\/|assets\/downloads\/|https?:\/\/)/i.test(x)&&!x.split('/').includes('..');
     const downloadFileName=x=>String(x||'').split('/').pop().split('?')[0]||'descarga';
     const getPlayable=()=>tracks.findIndex(t=>isAudioPath(t.audio));
@@ -126,12 +211,12 @@
     const shareDescription=`${album.title} · ${data.artist.name||'FMOH'} · ${album.year||''}. Canciones, créditos y enlaces del lanzamiento.`;
     const metaDescription=document.querySelector('meta[name=description]');if(metaDescription)metaDescription.content=shareDescription;
     for(const [property,value] of [['og:title',document.title],['og:description',shareDescription],['og:type','music.album']]){let el=document.querySelector(`meta[property="${property}"]`);if(!el){el=document.createElement('meta');el.setAttribute('property',property);document.head.appendChild(el);}el.content=value;}
-    const ld=document.createElement('script');ld.type='application/ld+json';ld.textContent=JSON.stringify({'@context':'https://schema.org','@type':'MusicAlbum',name:album.title,byArtist:{'@type':'MusicGroup',name:data.artist.name||'FMOH'},datePublished:album.date||String(album.year||''),genre:album.genre||'Hip-Hop',numTracks:tracks.length,track:tracks.map((t,i)=>({'@type':'MusicRecording',name:t.title,position:i+1}))}).replace(/</g,'\\u003c');document.head.appendChild(ld);
+    const ld=document.createElement('script');ld.type='application/ld+json';ld.dataset.albumSchema='';ld.textContent=JSON.stringify({'@context':'https://schema.org','@type':'MusicAlbum',name:album.title,byArtist:{'@type':'MusicGroup',name:data.artist.name||'FMOH'},datePublished:album.date||String(album.year||''),genre:album.genre||'Hip-Hop',numTracks:tracks.length,track:tracks.map((t,i)=>({'@type':'MusicRecording',name:t.title,position:i+1}))}).replace(/</g,'\\u003c');document.head.appendChild(ld);
     $('#albumKicker').textContent=`${data.artist.name||'FMOH'} / ${album.type||'ÁLBUM'} / ${album.year||''}`;
     $('#albumTitle').textContent=album.title;
     $('#albumArtist').textContent=data.artist.name||'FMOH';
     $('#albumTeaser').textContent=album.description||'';
-    $('#albumCover').dataset.media=album.cover;$('#playerCover').dataset.media=album.cover;
+    $('#albumCover').dataset.media=album.cover;
     $('#albumYear').textContent=album.year||'—';$('#albumFormat').textContent=album.type||'ÁLBUM';
     $('#albumTrackCount').textContent=String(tracks.length).padStart(2,'0');
     $('#albumTrackCounter').innerHTML=String(tracks.length).padStart(2,'0')+' <span>TEMAS</span>';
@@ -189,19 +274,12 @@
       const detail=[t.featuring?`CON ${esc(t.featuring)}`:'',t.producer?`PROD. ${esc(t.producer)}`:''].filter(Boolean).join(' · ');
       return `<div class="track-row" data-index="${i}"><span class="track-no">${String(i+1).padStart(2,'0')}</span><div class="track-info"><strong class="track-title">${esc(t.title||'Sin título')}</strong>${detail?`<small>${detail}</small>`:''}</div><span class="track-length">${esc(t.duration||'—')}</span><div class="track-action">${playable?`<button class="track-play" data-play="${i}" type="button" aria-label="Reproducir ${esc(t.title)}">▶</button>`:'<span class="track-unavailable" title="Audio no disponible en esta web">—</span>'}${downloadable?`<button class="track-download" type="button" data-download-track="${i}" aria-label="Descargar ${esc(t.title)}" title="Descargar canción"><span aria-hidden="true">↓</span> Descargar</button>`:''}</div></div>`;
     }).join(''):'<div class="empty-result">TRACKLIST PENDIENTE DE CARGAR</div>';
-    hydrateMedia();const audio=$('#audioElement');let current=-1;
-    function mark(){document.querySelectorAll('.track-row').forEach(row=>row.classList.toggle('playing',Number(row.dataset.index)===current));$('#audioPlay').textContent=audio.paused?'▶':'Ⅱ';
-      document.querySelectorAll('.track-play').forEach(button=>{const active=Number(button.dataset.play)===current&&!audio.paused;button.textContent=active?'Ⅱ':'▶';button.setAttribute('aria-label',active?'Pausar canción':'Reproducir canción');});$('#audioPlay').setAttribute('aria-label',audio.paused?'Reproducir':'Pausar');}
-    async function playIndex(i){const t=tracks[i];if(!t||!isAudioPath(t.audio)){toast('Esta canción todavía no tiene un archivo de audio cargado.');return;}
-      const src=await resolveMedia(t.audio);if(!src||src.startsWith('media/uploads/')){toast('Archivo de audio no disponible: revisa la carga.');return;}
-      current=i;audio.src=src;$('#audioDock').hidden=false;$('#playerTitle').textContent=t.title;
-      try{await audio.play();}catch{toast('No fue posible reproducir el audio. Comprueba el archivo o el servidor.');}mark();
-    }
+    hydrateMedia();
     const playAlbumBtn=$('#playAlbumBtn');if(getPlayable()===-1){const firstLink=safeLink(album.spotify)||safeLink(album.apple)||safeLink(album.bandcamp)||safeLink(album.soundcloud)||safeLink(album.youtube);if(firstLink){playAlbumBtn.textContent='↗ ESCUCHAR EN PLATAFORMAS';playAlbumBtn.addEventListener('click',()=>{window.open(firstLink,'_blank','noopener,noreferrer');});}else{playAlbumBtn.textContent='♫ AUDIO PRÓXIMAMENTE';playAlbumBtn.disabled=true;}}
-    if(getPlayable()!==-1)playAlbumBtn.addEventListener('click',()=>{if(current!==-1&&audio.paused){audio.play().catch(()=>toast('No se pudo reanudar el audio.'));return;}if(current!==-1&&!audio.paused){audio.pause();return;}const first=getPlayable();if(first>=0)playIndex(first);});
+    if(getPlayable()!==-1)playAlbumBtn.addEventListener('click',()=>player.playAlbum(album));
     $('#shareAlbumBtn').addEventListener('click',async()=>{const href=location.href;try{if(navigator.share)await navigator.share({title:document.title,url:href});else if(navigator.clipboard?.writeText){await navigator.clipboard.writeText(href);toast('Enlace del álbum copiado.');}else{prompt('Copia el enlace del álbum:',href);}}catch(e){if(e.name!=='AbortError')toast('No se pudo compartir.');}});
     $('#trackRows').addEventListener('click',async ev=>{
-      const play=ev.target.closest('[data-play]');if(play){const i=Number(play.dataset.play);if(current===i&&!audio.paused){audio.pause();mark();}else if(current===i&&audio.paused){audio.play().catch(()=>toast('No se pudo reproducir el audio.'));}else playIndex(i);return;}
+      const play=ev.target.closest('[data-play]');if(play){player.playTrack(album,Number(play.dataset.play));return;}
       const btn=ev.target.closest('[data-download-track]');if(!btn)return;
       const t=tracks[Number(btn.dataset.downloadTrack)];if(!t?.downloadEnabled||!isAudioPath(t.audio))return;
       const src=await resolveMedia(t.audio);if(!src||src.startsWith('media/uploads/')){toast('No se encontró el archivo de audio.');return;}
@@ -209,15 +287,83 @@
       if(/^https?:\/\//i.test(src)&&new URL(src,location.href).origin!==location.origin){a.target='_blank';a.rel='noopener';a.removeAttribute('download');}
       document.body.append(a);a.click();a.remove();
     });
-    $('#audioPlay').addEventListener('click',async()=>{if(current<0){let first=getPlayable();if(first>=0)await playIndex(first);return;}if(audio.paused)audio.play().catch(()=>toast('No se pudo reproducir el audio.'));else audio.pause();mark();});
-    function skip(dir){if(!tracks.length)return;let next=current;for(let i=0;i<tracks.length;i++){next=(next+dir+tracks.length)%tracks.length;if(isAudioPath(tracks[next]?.audio)){playIndex(next);return;}}toast('No hay más canciones con audio cargado.');}
-    $('#audioPrev').addEventListener('click',()=>skip(-1));$('#audioNext').addEventListener('click',()=>skip(1));audio.addEventListener('ended',()=>{let next=current+1;while(next<tracks.length&&!isAudioPath(tracks[next]?.audio))next++;if(next<tracks.length)playIndex(next);else{current=-1;$('#audioDock').hidden=true;mark();}});audio.addEventListener('pause',mark);audio.addEventListener('play',mark);
-    audio.addEventListener('timeupdate',()=>{$('#audioTime').textContent=formatTime(audio.currentTime);if(Number.isFinite(audio.duration)&&audio.duration>0){$('#audioSeek').value=String(Math.floor(1000*audio.currentTime/audio.duration));$('#audioSeek').style.setProperty('--fill',`${Math.floor(100*audio.currentTime/audio.duration)}%`);}});
-    audio.addEventListener('loadedmetadata',()=>{$('#audioDuration').textContent=formatTime(audio.duration);$('#audioSeek').value='0';});audio.addEventListener('error',()=>toast('El audio no se encontró. Revisa la ruta del archivo.'));
-    $('#audioSeek').addEventListener('input',e=>{if(Number.isFinite(audio.duration))audio.currentTime=audio.duration*Number(e.target.value)/1000;});
-    $('#audioVolume').addEventListener('input',e=>audio.volume=Number(e.target.value)/100);audio.volume=.8;
-    document.addEventListener('keydown',e=>{const tag=document.activeElement?.tagName;if(!['INPUT','TEXTAREA','SELECT','BUTTON'].includes(tag)&&!(e.ctrlKey||e.metaKey||e.altKey)&&e.code==='Space'&&current>=0){e.preventDefault();if(audio.paused)audio.play().catch(()=>{});else audio.pause();}});
   }
   window.FMOH={getData:()=>deepClone(data),setData,seed:deepClone(seed),mediaGet,mediaSave,mediaClear,resolveMedia,hydrateMedia,esc,toast,STORAGE,DB_NAME};
-  document.addEventListener('DOMContentLoaded',()=>{initShared();const page=document.body.dataset.page;if(page==='home')renderHome();if(page==='album')renderAlbum();});
+  function renderCurrentPage(){
+    delete document.body.dataset.albumId;
+    initShared();
+    if(document.body.dataset.page==='home')renderHome();
+    if(document.body.dataset.page==='album')renderAlbum();
+    player?.sync();
+  }
+  function initNavigation(){
+    // Conservar el documento y el audio; reemplazar únicamente el contenido público.
+    const directory=new URL('.',location.href);
+    const homePath=new URL('index.html',directory).pathname,albumPath=new URL('album.html',directory).pathname;
+    const templates=new Map();
+    let renderedRoute=location.pathname+location.search,navigation=0;
+    function templatePath(url){return url.pathname===directory.pathname?homePath:url.pathname;}
+    function snapshot(doc){
+      if(!['home','album'].includes(doc.body.dataset.page))throw Error('Página incompatible');
+      const parts=['header','main','footer'].map(selector=>doc.querySelector(selector));
+      if(parts.some(part=>!part))throw Error('Página incompleta');
+      return {page:doc.body.dataset.page,title:doc.title,description:doc.querySelector('meta[name="description"]')?.content||'',parts:parts.map(part=>part.cloneNode(true))};
+    }
+    templates.set(templatePath(new URL(location.href)),snapshot(document));
+    if('scrollRestoration' in history)history.scrollRestoration='manual';
+    function scrollPage(url,position){
+      let target;try{target=url.hash&&document.getElementById(decodeURIComponent(url.hash.slice(1)));}catch{}
+      if(target)target.scrollIntoView({behavior:'instant'});
+      else window.scrollTo({left:position?.[0]||0,top:position?.[1]||0,behavior:'instant'});
+    }
+    async function navigate(url,push,position){
+      const token=++navigation;
+      try{
+        if(push)history.replaceState({...history.state,fmohScroll:[scrollX,scrollY]},'',location.href);
+        const path=templatePath(url);
+        if(!templates.has(path)){
+          const response=await fetch(new URL(path,location.href),{cache:'no-cache'});
+          if(!response.ok)throw Error('Página no disponible');
+          templates.set(path,snapshot(new DOMParser().parseFromString(await response.text(),'text/html')));
+        }
+        if(token!==navigation)return;
+        const template=templates.get(path);
+        if(push)history.pushState({fmohScroll:[0,0]},'',url.href);
+        for(const [index,selector] of ['header','main','footer'].entries())document.querySelector(selector).replaceWith(template.parts[index].cloneNode(true));
+        document.body.dataset.page=template.page;
+        document.title=template.title;
+        const description=document.querySelector('meta[name="description"]');if(description)description.content=template.description;
+        document.querySelectorAll('meta[property^="og:"],script[data-album-schema]').forEach(node=>node.remove());
+        renderCurrentPage();
+        renderedRoute=location.pathname+location.search;
+        if(push){const main=document.querySelector('main');main.setAttribute('tabindex','-1');main.focus({preventScroll:true});}
+        requestAnimationFrame(()=>{if(token===navigation)scrollPage(url,position);});
+      }catch(error){
+        if(token===navigation){console.warn('No se pudo navegar sin recargar',error);location.assign(url.href);}
+      }
+    }
+    document.addEventListener('click',event=>{
+      if(event.defaultPrevented||event.button!==0||event.ctrlKey||event.metaKey||event.shiftKey||event.altKey)return;
+      const anchor=event.target.closest('a[href]');
+      if(!anchor||anchor.hasAttribute('download')||(anchor.target&&anchor.target!=='_self'))return;
+      const url=new URL(anchor.href,location.href),path=templatePath(url);
+      if(url.origin!==location.origin||![homePath,albumPath].includes(path))return;
+      if(url.pathname===location.pathname&&url.search===location.search){
+        if(!url.hash){event.preventDefault();window.scrollTo({top:0,behavior:'instant'});}
+        return;
+      }
+      event.preventDefault();navigate(url,true);
+    });
+    window.addEventListener('popstate',event=>{
+      const url=new URL(location.href);
+      if(location.pathname+location.search===renderedRoute){scrollPage(url,event.state?.fmohScroll);return;}
+      navigate(url,false,event.state?.fmohScroll);
+    });
+  }
+  document.addEventListener('DOMContentLoaded',()=>{
+    if(['home','album'].includes(document.body.dataset.page)){
+      player=initPlayer();initNavigation();
+    }
+    renderCurrentPage();
+  });
 })();
