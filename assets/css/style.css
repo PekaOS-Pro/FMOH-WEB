@@ -20,7 +20,8 @@ html{scroll-behavior:smooth}
 .track-info strong{display:block;overflow-wrap:anywhere}
 .track-info small{display:block;font-size:10px;line-height:1.5;color:#a5a99e;margin-top:6px;letter-spacing:.4px}
 .track-action{align-items:center;gap:7px}
-.track-download{border:1px solid #62685e;background:transparent;color:var(--yellow);width:38px;height:38px;border-radius:50%;font-size:18px;font-weight:700}
+.track-download{display:inline-flex;align-items:center;justify-content:center;gap:4px;flex:none;border:1px solid #62685e;background:transparent;color:var(--yellow);padding:0 9px;height:38px;border-radius:4px;font-size:11px;font-weight:700;white-space:nowrap}
+.track-head,.track-row{grid-template-columns:65px minmax(0,1fr) 100px 150px}
 .track-download:hover{background:var(--yellow);border-color:var(--yellow);color:#0b0c0c}
 .track-row.playing .track-no{color:#f4d58c}
 .track-row.playing .track-title{color:#f6dea8}
@@ -67,6 +68,7 @@ body[data-page=album]:has(.audio-dock:not([hidden])){padding-bottom:94px}
  .audio-dock .audio-now strong{font-size:11px}
 }
 @media(max-width:760px){
+ .track-head,.track-row{grid-template-columns:37px minmax(0,1fr) 48px 135px}
  .album-quick-meta{margin-top:7px;font-size:9px}
  .album-hero-grid{gap:55px}
  .download-section{padding:60px 0}
@@ -86,15 +88,16 @@ body[data-page=album]:has(.audio-dock:not([hidden])){padding-bottom:94px}
  body[data-page=album]:has(.audio-dock:not([hidden])){padding-bottom:110px}
 }
 @media(max-width:450px){
+ #canciones .section-heading{gap:8px}
  .album-hero-text h1{font-size:clamp(62px,17vw,88px)}
  .album-hero-actions{gap:8px}
  .album-hero-actions .btn{font-size:10px;padding:14px 12px;min-height:46px;white-space:normal}
  .album-hero-actions .btn-accent{flex:1 1 100%}
- .track-head,.track-row{grid-template-columns:26px minmax(0,1fr) 41px 80px;gap:5px}
+ .track-head,.track-row{grid-template-columns:26px minmax(0,1fr) 41px 120px;gap:5px}
  .track-info small{font-size:9px}
  .track-action{gap:6px}
  .track-play{width:34px;height:34px}
- .track-download{height:31px;width:31px}
+ .track-download{height:34px;padding:0 7px;font-size:10px}
  .track-unavailable{width:31px}
  .audio-dock{grid-template-columns:35px minmax(65px,1fr) 26px 29px 26px;padding:8px 12px;column-gap:4px}
  .audio-dock img{width:35px;height:35px}

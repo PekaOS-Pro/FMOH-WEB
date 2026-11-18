@@ -69,6 +69,14 @@
     data.albumTextRevision=seed.albumTextRevision;
     try{localStorage.setItem(STORAGE,JSON.stringify(data));}catch(e){console.warn('No se pudieron guardar los títulos y el origen de los discos',e);}
   }
+  // Habilitar la descarga individual también en los borradores anteriores.
+  if(seed.trackDownloadsRevision&&data.trackDownloadsRevision!==seed.trackDownloadsRevision){
+    for(const album of data.albums)for(const track of album.tracks||[]){
+      if(track.audio)track.downloadEnabled=true;
+    }
+    data.trackDownloadsRevision=seed.trackDownloadsRevision;
+    try{localStorage.setItem(STORAGE,JSON.stringify(data));}catch(e){console.warn('No se pudieron guardar las descargas individuales',e);}
+  }
   const openDB=()=>new Promise((resolve,reject)=>{if(!('indexedDB' in window)){reject(new Error('IndexedDB no disponible'));return;}const r=indexedDB.open(DB_NAME,1);r.onupgradeneeded=()=>{if(!r.result.objectStoreNames.contains('media'))r.result.createObjectStore('media');};r.onsuccess=()=>resolve(r.result);r.onerror=()=>reject(r.error);});
   const mediaCache=new Map();
   async function mediaGet(name){try{const db=await openDB();return await new Promise((resolve,reject)=>{const req=db.transaction('media').objectStore('media').get(name);req.onsuccess=()=>resolve(req.result||null);req.onerror=()=>reject(req.error);});}catch{return null;}}
@@ -179,7 +187,7 @@
     $('#trackRows').innerHTML=tracks.length?tracks.map((t,i)=>{
       const playable=isAudioPath(t.audio),downloadable=playable&&t.downloadEnabled===true;
       const detail=[t.featuring?`CON ${esc(t.featuring)}`:'',t.producer?`PROD. ${esc(t.producer)}`:''].filter(Boolean).join(' · ');
-      return `<div class="track-row" data-index="${i}"><span class="track-no">${String(i+1).padStart(2,'0')}</span><div class="track-info"><strong class="track-title">${esc(t.title||'Sin título')}</strong>${detail?`<small>${detail}</small>`:''}</div><span class="track-length">${esc(t.duration||'—')}</span><div class="track-action">${playable?`<button class="track-play" data-play="${i}" type="button" aria-label="Reproducir ${esc(t.title)}">▶</button>`:'<span class="track-unavailable" title="Audio no disponible en esta web">—</span>'}${downloadable?`<button class="track-download" type="button" data-download-track="${i}" aria-label="Descargar ${esc(t.title)}" title="Descargar canción autorizada">↓</button>`:''}</div></div>`;
+      return `<div class="track-row" data-index="${i}"><span class="track-no">${String(i+1).padStart(2,'0')}</span><div class="track-info"><strong class="track-title">${esc(t.title||'Sin título')}</strong>${detail?`<small>${detail}</small>`:''}</div><span class="track-length">${esc(t.duration||'—')}</span><div class="track-action">${playable?`<button class="track-play" data-play="${i}" type="button" aria-label="Reproducir ${esc(t.title)}">▶</button>`:'<span class="track-unavailable" title="Audio no disponible en esta web">—</span>'}${downloadable?`<button class="track-download" type="button" data-download-track="${i}" aria-label="Descargar ${esc(t.title)}" title="Descargar canción"><span aria-hidden="true">↓</span> Descargar</button>`:''}</div></div>`;
     }).join(''):'<div class="empty-result">TRACKLIST PENDIENTE DE CARGAR</div>';
     hydrateMedia();const audio=$('#audioElement');let current=-1;
     function mark(){document.querySelectorAll('.track-row').forEach(row=>row.classList.toggle('playing',Number(row.dataset.index)===current));$('#audioPlay').textContent=audio.paused?'▶':'Ⅱ';
