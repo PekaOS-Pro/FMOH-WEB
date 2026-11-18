@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0b0c0c"><meta name="description" content="FMOH: discografía, música y trayectoria del rapero chileno.">
+  <title>FMOH — Discografía oficial · Rap chileno</title>
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="home">
+  <header class="header"><div class="wrap nav-inner">
+    <a class="wordmark" href="index.html" aria-label="FMOH inicio">FMOH<span class="mark-square"></span></a>
+    <nav class="nav" id="nav"><a href="#inicio">INICIO</a><a href="#discografia">DISCOGRAFÍA</a><a href="#biografia">BIOGRAFÍA</a><a href="#contacto">CONTACTO</a></nav>
+    <a class="nav-stream" id="navSpotify" href="https://open.spotify.com/intl-es/artist/0ESfs82bdPWuXCugvIW3on" target="_blank" rel="noopener">ESCUCHAR EN SPOTIFY ↗</a>
+    <button class="menu-btn" id="menuBtn" type="button" aria-label="Abrir menú" aria-expanded="false">☰</button>
+  </div></header>
+  <main>
+    <section class="hero" id="inicio"><div class="hero-image" id="heroImage"></div><div class="hero-overlay"></div>
+      <div class="wrap hero-content"><div class="hero-eyebrow"><span class="tiny-box"></span><span id="heroEyebrow">CHILE · RAP · DESDE 1998</span></div>
+        <p class="hero-index">ARCHIVO MUSICAL / ARTISTA</p><h1 class="hero-title" id="heroTitle">FMOH<span></span></h1>
+        <div class="hero-lower"><div><div class="hero-line"></div><p class="hero-tagline" id="heroTagline">HIP HOP DESDE VILLA ALEMANA.</p><p class="hero-subtitle">Discografía, raíces, identidad y música. Un archivo para explorar cada lanzamiento.</p><div class="hero-buttons"><a class="btn btn-accent" href="#discografia">EXPLORAR DISCOGRAFÍA <span>↗</span></a><a class="btn btn-outline" href="#biografia">CONOCER AL ARTISTA ↓</a></div></div><div class="hero-feature" id="heroFeature"></div></div>
+      </div><span class="hero-vertical">MÚSICA / IDENTIDAD / HISTORIA</span>
+    </section>
+    <div class="ticker"><div>FMOH <i>✦</i> HIP HOP CHILENO <i>✦</i> DESDE 1998 <i>✦</i> VILLA ALEMANA <i>✦</i> FMOH <i>✦</i> DISCOGRAFÍA <i>✦</i> RAP CHILENO <i>✦</i></div></div>
+    <section class="section records wrap" id="discografia"><div class="section-heading"><div><span class="kicker">01 / ARCHIVO MUSICAL</span><h2>DISCO<span>GRAFÍA.</span></h2><p class="muted narrow">Explora los discos, escucha las canciones y conoce su historia.</p></div><div class="section-marker" id="albumCounter">09 <span>ÁLBUMES</span></div></div>
+      <div class="filterbar"><div class="filter-tabs" role="group" aria-label="Filtrar lanzamientos"><button type="button" data-filter="albums" class="active">ÁLBUMES</button><button type="button" data-filter="singles">SENCILLOS</button><button type="button" data-filter="all">TODOS</button></div><label class="search-label"><span>⌕</span><input id="searchInput" placeholder="BUSCAR LANZAMIENTO" aria-label="Buscar lanzamiento"></label></div>
+      <div class="album-grid" id="albumGrid"></div><div class="singles-list" id="singlesList" hidden></div>
+    </section>
+    <section class="bio-section" id="biografia"><div class="wrap bio-grid"><div class="bio-visual"><img id="artistPhoto" src="assets/images/artista-demo.jpg" alt="Imagen provisional para la fotografía del artista" loading="lazy"><span class="bio-stamp">FMOH / CHILE</span></div><div class="bio-copy"><span class="kicker">02 / LA HISTORIA DETRÁS DE LA VOZ</span><h2>FMOH<span></span></h2><p class="bio-quote" id="artistQuote">«Una trayectoria escrita a ritmo de hip-hop.»</p><div class="bio-rule"></div><p class="bio-text" id="artistBio"></p><div class="bio-chips"><span>HIP HOP</span><span>VILLA ALEMANA</span><span>CHILE</span></div><a class="text-link" id="bioSpotify" href="#contacto">EXPLORAR SU MÚSICA <span>↗</span></a></div></div></section>
+    <section class="listen-section wrap" id="contacto"><span class="kicker">03 / CONECTA CON FMOH</span><div class="listen-layout"><h2>LA MÚSICA<br>CONTINÚA<span>.</span></h2><div><p>Escucha los lanzamientos, descubre nuevos temas y sigue las novedades en sus plataformas.</p><div class="social-links" id="socialLinks"></div></div></div></section>
+  </main>
+  <footer class="footer"><div class="wrap footer-flex"><div><a class="footer-logo" href="#inicio">FMOH<span>■</span></a><p>HIP HOP DESDE VILLA ALEMANA.</p></div><div class="footer-meta"><span>© <span id="yearNow"></span> FMOH · CATÁLOGO MUSICAL POR PEKADOR MUSIC DISTRIBUTION</span><a href="#inicio">VOLVER ARRIBA ↑</a></div></div></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="data/site-data.js"></script><script src="assets/js/site.js" defer></script>
+</body></html>

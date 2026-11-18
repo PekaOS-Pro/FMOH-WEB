@@ -1,0 +1,1682 @@
+window.FMOH_DATA = {
+  "artist": {
+    "name": "FMOH",
+    "tagline": "HIP HOP DESDE VILLA ALEMANA",
+    "eyebrow": "CHILE · RAP · DESDE 1998",
+    "bio": "FMOH es un rapero chileno de Valparaíso, activo en el movimiento hip-hop desde 1998. Su discografía reúne proyectos publicados a lo largo de distintas etapas, desde K-ñabis y Hexiza Force hasta Literalmente y Hexiza Force 2.",
+    "quote": "Una trayectoria escrita a ritmo de hip-hop.",
+    "photo": "assets/images/artista-demo.jpg",
+    "hero": "assets/images/studio-hero.jpg",
+    "spotify": "https://open.spotify.com/intl-es/artist/0ESfs82bdPWuXCugvIW3on",
+    "youtube": "https://www.youtube.com/@fmohchile",
+    "instagram": "https://www.instagram.com/fmoh.chile/",
+    "tiktok": "https://www.tiktok.com/@fmoh.chile",
+    "facebook": "https://www.facebook.com/fmoh.oficial",
+    "email": ""
+  },
+  "albums": [
+    {
+      "id": "hexiza-force-2",
+      "title": "Hexiza Force 2",
+      "year": "2025",
+      "date": "6 de enero de 2025",
+      "type": "Álbum",
+      "cover": "assets/images/cover-hexiza-force-2.jpg",
+      "description": "El álbum Hexiza Force 2 reúne siete canciones.",
+      "credits": "",
+      "spotify": "",
+      "apple": "https://music.apple.com/us/album/rap-no-cambio-feat-el-astu/1785012146",
+      "tracks": [
+        {
+          "title": "Pa Hacerte Explotar (Feat. Deejay Lalo)",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/hexiza-force-2-01.wav",
+          "duration": "2:17",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "24-7 X 365",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/hexiza-force-2-02.wav",
+          "duration": "2:21",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Rap No Cambio (Feat. El Astu)",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/hexiza-force-2-03.wav",
+          "duration": "2:49",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Chalalaw",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/hexiza-force-2-04.wav",
+          "duration": "2:36",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Ya Crecio",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/hexiza-force-2-05.wav",
+          "duration": "3:10",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Mi Punto De Estallo",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/hexiza-force-2-06.wav",
+          "duration": "2:43",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Un Ramo En La Escuela",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/hexiza-force-2-07.wav",
+          "duration": "2:31",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        }
+      ],
+      "genre": "Hip-Hop / Rap",
+      "label": "",
+      "producer": "",
+      "location": "Villa Alemana, Chile",
+      "downloadUrl": "",
+      "downloadFormat": "",
+      "downloadEnabled": false,
+      "downloadInfo": "",
+      "rights": "",
+      "bandcamp": "",
+      "youtube": "",
+      "soundcloud": ""
+    },
+    {
+      "id": "literalmente",
+      "title": "Literalmente",
+      "year": "2021",
+      "date": "5 de junio de 2021",
+      "type": "Álbum",
+      "cover": "assets/images/cover-literalmente.jpg",
+      "description": "",
+      "credits": "",
+      "spotify": "",
+      "apple": "https://music.apple.com/us/album/resiliente-feat-el-astu/1569356592",
+      "tracks": [
+        {
+          "title": "Están Pica'o",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/literalmente-01.mp3",
+          "duration": "3:06",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Rápido",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/literalmente-02.mp3",
+          "duration": "2:54",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "La Crítica",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/literalmente-03.mp3",
+          "duration": "2:41",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Libertad",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/literalmente-04.mp3",
+          "duration": "2:30",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "No Me Funi La Zona (Feat. Rotbailer & Dj C4)",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/literalmente-05.mp3",
+          "duration": "3:02",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Disposición (Feat. Nattydread)",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/literalmente-06.mp3",
+          "duration": "2:01",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Resiliente (Feat. El Astu)",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/literalmente-07.mp3",
+          "duration": "2:48",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Stand Up (Feat. Brocka Fett & Dj Ropo)",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/literalmente-08.mp3",
+          "duration": "3:26",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Lapiz Y Papel (Feat. Nattydread & Deejay Lalo)",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/literalmente-09.mp3",
+          "duration": "3:04",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Cuando Hay Amor (Feat. Diter Hans & Dj C4)",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/literalmente-10.mp3",
+          "duration": "3:31",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "El Momento Exacto",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/literalmente-11.mp3",
+          "duration": "2:53",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Flow V.a. (Feat. Hemcilopez)",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/literalmente-12.mp3",
+          "duration": "2:43",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Tekache",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/literalmente-13.mp3",
+          "duration": "2:48",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        }
+      ],
+      "genre": "Hip-Hop / Rap",
+      "label": "",
+      "producer": "",
+      "location": "Villa Alemana, Chile",
+      "downloadUrl": "",
+      "downloadFormat": "",
+      "downloadEnabled": false,
+      "downloadInfo": "",
+      "rights": "",
+      "bandcamp": "",
+      "youtube": "",
+      "soundcloud": ""
+    },
+    {
+      "id": "equilibrium",
+      "title": "Equilibrium",
+      "year": "2018",
+      "date": "12 de enero de 2018",
+      "type": "Álbum",
+      "cover": "assets/images/cover-equilibrium.jpg",
+      "description": "",
+      "credits": "",
+      "spotify": "",
+      "apple": "https://music.apple.com/us/album/equilibrium/1591920202",
+      "tracks": [
+        {
+          "title": "Intro (The Code)",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/equilibrium-01.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Convicción",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/equilibrium-02.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Más Vale Tarde",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/equilibrium-03.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Contigo (Feat Electricista)",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/equilibrium-04.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "La Métrica",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/equilibrium-05.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Más Allá Del Sol",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/equilibrium-06.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Veleidad",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/equilibrium-07.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Sentimiento (Feat. Errede)",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/equilibrium-08.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Gracia A Dios",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/equilibrium-09.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Caradura (Feat. Fumon & Dj Toniko)",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/equilibrium-10.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        }
+      ],
+      "genre": "Hip-Hop / Rap",
+      "label": "",
+      "producer": "",
+      "location": "Villa Alemana, Chile",
+      "downloadUrl": "",
+      "downloadFormat": "",
+      "downloadEnabled": false,
+      "downloadInfo": "",
+      "rights": "",
+      "bandcamp": "",
+      "youtube": "",
+      "soundcloud": ""
+    },
+    {
+      "id": "malas-pulgas",
+      "title": "Malas Pulgas",
+      "year": "2014",
+      "date": "2014",
+      "type": "Álbum",
+      "cover": "assets/images/cover-malas-pulgas.jpg",
+      "description": "",
+      "credits": "",
+      "spotify": "",
+      "apple": "https://music.apple.com/us/album/malas-pulgas/1571743700",
+      "tracks": [
+        {
+          "title": "Chilenistic",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/malas-pulgas-01.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Se Hace Por Que Nace",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/malas-pulgas-02.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Bisagras (Feat. Gammal Y Errede)",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/malas-pulgas-03.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Dificil Love (Feat. Phillip Tyrer)",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/malas-pulgas-04.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Asunto Astuto (Feat. Sagaz)",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/malas-pulgas-05.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Inter. Graffiti",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/malas-pulgas-06.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Dos Caras (Feat. Gammal)",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/malas-pulgas-07.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Teikirisi",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/malas-pulgas-08.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Siguen Haciendolo Mal (Feat. Moise Y Dj Toniko)",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/malas-pulgas-09.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Con Hechos Se Demuestra (Feat. Sagaz)",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/malas-pulgas-10.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Sabes Que No Puedes Parar (Feat. Moise Y Sagaz)",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/malas-pulgas-11.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Music Pa`tu Party (Feat. Fumon)",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/malas-pulgas-12.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Kabum! (Feat. Fumon)",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/malas-pulgas-13.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Zumbarea (Feat. Moise)",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/malas-pulgas-14.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Chiquillo",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/malas-pulgas-15.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        }
+      ],
+      "genre": "Hip-Hop / Rap",
+      "label": "",
+      "producer": "",
+      "location": "Villa Alemana, Chile",
+      "downloadUrl": "",
+      "downloadFormat": "",
+      "downloadEnabled": false,
+      "downloadInfo": "",
+      "rights": "",
+      "bandcamp": "",
+      "youtube": "",
+      "soundcloud": ""
+    },
+    {
+      "id": "7",
+      "title": "7",
+      "year": "2010",
+      "date": "",
+      "type": "Álbum",
+      "cover": "assets/images/cover-7.jpg",
+      "description": "",
+      "credits": "",
+      "spotify": "",
+      "apple": "",
+      "tracks": [
+        {
+          "title": "Y Que Te Pum, Que Te Pa!!!!",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/7-01.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "El Cuento Del Tio Efe",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/7-02.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Revolución Cardiaca Feat. Dah Loko",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/7-03.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Criticones",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/7-04.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Cada Loco Con Su Track",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/7-05.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Sin Lugar Para Los Debiles Feat. Retako Lopez",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/7-06.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Son De A 2",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/7-07.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Calzoncillo Largo De Lana",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/7-08.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Pesos A Pasos Se  Ganan",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/7-09.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Me Sucedio Por Porfiao",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/7-10.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Venga Reina Feat. Emci Solo",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/7-11.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Marga-marga Feat. Fumon",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/7-12.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Pues Bien. Dale!!",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/7-13.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Nos Vemos Bye Bom-bom Feat. Fumon",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/7-14.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        }
+      ],
+      "genre": "Hip-Hop / Rap",
+      "label": "",
+      "producer": "",
+      "location": "Villa Alemana, Chile",
+      "downloadUrl": "",
+      "downloadFormat": "",
+      "downloadEnabled": false,
+      "downloadInfo": "",
+      "rights": "",
+      "bandcamp": "",
+      "youtube": "",
+      "soundcloud": ""
+    },
+    {
+      "id": "bulldog-life",
+      "title": "BullDog Life",
+      "year": "2009",
+      "date": "2009",
+      "type": "Álbum",
+      "cover": "assets/images/cover-bulldog-life.jpg",
+      "description": "",
+      "credits": "",
+      "spotify": "",
+      "apple": "https://music.apple.com/us/album/bulldog-life/1589785472",
+      "tracks": [
+        {
+          "title": "In Mi-k-za",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/bulldog-life-01.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "El Mas Perro",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/bulldog-life-02.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Mata Con Vo (Remix) - Con Predicto",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/bulldog-life-03.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Que Sucede - Con Sagaz",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/bulldog-life-04.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Jure No Fallar",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/bulldog-life-05.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Intermedio Solistas",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/bulldog-life-06.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Ritmo, Peso Y Poesia - Con Rolo",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/bulldog-life-07.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "El Arbol De La Rima (Remix) - Con Predicto",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/bulldog-life-08.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Mi Cancion, Mi Vision, Mi Talento - Con Dah Loko",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/bulldog-life-09.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Pantallas - Con Predicto",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/bulldog-life-10.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Intermedio Ca_amo",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/bulldog-life-11.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Marionetas - Con Bubaseta",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/bulldog-life-12.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Apunto Y Escribo - Con Predicto",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/bulldog-life-13.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Benjaminiño",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/bulldog-life-14.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        }
+      ],
+      "genre": "Hip-Hop / Rap",
+      "label": "",
+      "producer": "",
+      "location": "Villa Alemana, Chile",
+      "downloadUrl": "",
+      "downloadFormat": "",
+      "downloadEnabled": false,
+      "downloadInfo": "",
+      "rights": "",
+      "bandcamp": "",
+      "youtube": "",
+      "soundcloud": ""
+    },
+    {
+      "id": "los-solistas",
+      "title": "Los Solistas",
+      "year": "2008",
+      "date": "2008",
+      "type": "Álbum",
+      "cover": "assets/images/cover-los-solistas.jpg",
+      "description": "",
+      "credits": "",
+      "spotify": "",
+      "apple": "https://music.apple.com/us/album/los-solistas/1591891215",
+      "tracks": [
+        {
+          "title": "Armonil (Fumon)",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/los-solistas-01.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Axila Moja",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/los-solistas-02.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Battery",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/los-solistas-03.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Contentozklan - Fmoh",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/los-solistas-04.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Desde El Culo Del Mundo Con Chalo Contreras",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/los-solistas-05.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Escribiendo Me Encontre (Predicto)",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/los-solistas-06.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Esperame Sentao",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/los-solistas-07.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Estigma Siglo Xxi (Con Sgz Dj)",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/los-solistas-08.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Inmortal",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/los-solistas-09.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Intermedio - Predicto",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/los-solistas-10.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Matamoscas",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/los-solistas-11.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Mono-tono",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/los-solistas-12.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Ni Martir Ni Apostol",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/los-solistas-13.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "No Te Estoy Engañando (Predicto Con Sgz Dj)",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/los-solistas-14.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Operacion Cabronaje",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/los-solistas-15.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Respeto A Ellas",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/los-solistas-16.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Uno Solo",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/los-solistas-17.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Vision De Mi Calle - Predicto",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/los-solistas-18.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Weas En El Cerebro",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/los-solistas-19.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        }
+      ],
+      "genre": "Hip-Hop / Rap",
+      "label": "",
+      "producer": "",
+      "location": "Villa Alemana, Chile",
+      "downloadUrl": "",
+      "downloadFormat": "",
+      "downloadEnabled": false,
+      "downloadInfo": "",
+      "rights": "",
+      "bandcamp": "",
+      "youtube": "",
+      "soundcloud": ""
+    },
+    {
+      "id": "hexiza-force",
+      "title": "Hexiza Force",
+      "year": "2007",
+      "date": "22 de octubre de 2007",
+      "type": "Álbum",
+      "cover": "assets/images/cover-hexiza-force.jpg",
+      "description": "",
+      "credits": "",
+      "spotify": "",
+      "apple": "https://music.apple.com/us/album/hexiza-force/1651429606",
+      "tracks": [
+        {
+          "title": "Intro - Cleptomano De Peliculas",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/hexiza-force-01.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Lo Hecho, Hecho Esta",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/hexiza-force-02.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "En La Misma Mente Con Billanos",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/hexiza-force-03.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Caiga A Quien Le Caiga (Cqc) Con Predicto",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/hexiza-force-04.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Escobillon Con Jar",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/hexiza-force-05.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Evolusiona El Rap",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/hexiza-force-06.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Aver Quien Va A Detener (The Train)con Solistas",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/hexiza-force-07.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Interludio - Para El Barrio",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/hexiza-force-08.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Zancadillas. Chaucha! Con Ninja Sekta (Nqv) Y Predicto",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/hexiza-force-09.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Mejor Solista Que Mal Acompañado Con Sgz",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/hexiza-force-10.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Dj Cambia Esa Wea! Con Predicto",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/hexiza-force-11.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Los Mismos Weones De Siempre Y Sus Crias Con Rottweiler",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/hexiza-force-12.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Como Sea. Es Musica Con Nuesras",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/hexiza-force-13.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Interludio - Optimismo",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/hexiza-force-14.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Las Vueltas De La Vida Con Sgz",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/hexiza-force-15.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Asi Estan Las Cosas",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/hexiza-force-16.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Bajo Control Con Predicto, Pedro Santo Y Tha Droga",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/hexiza-force-17.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Esta Tirao El Chancho Con Predicto",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/hexiza-force-18.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Outro - Marihuana",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/hexiza-force-19.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        }
+      ],
+      "genre": "Hip-Hop / Rap",
+      "label": "",
+      "producer": "",
+      "location": "Villa Alemana, Chile",
+      "downloadUrl": "",
+      "downloadFormat": "",
+      "downloadEnabled": false,
+      "downloadInfo": "",
+      "rights": "",
+      "bandcamp": "",
+      "youtube": "",
+      "soundcloud": ""
+    },
+    {
+      "id": "ineditos-tracks",
+      "title": "Inéditos tracks (2002 - 2007)",
+      "year": "2007",
+      "date": "",
+      "type": "Álbum",
+      "cover": "assets/images/cover-ineditos-tracks.jpg",
+      "description": "",
+      "credits": "",
+      "spotify": "",
+      "apple": "",
+      "tracks": [
+        {
+          "title": "Somos Asi (Feat. Leon)",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/ineditos-tracks-01.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Dando El Corte (Feat. Fantasma)",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/ineditos-tracks-02.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Magisterio (Feat. Shan)",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/ineditos-tracks-03.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Unidos X La Pasion De Un Arte (Feat. Don Ra Y Axis Motivacion (Antofagasta Y Tocopilla)",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/ineditos-tracks-04.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Dulce Y Amargo - Fmoh Con Cdt",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/ineditos-tracks-05.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Al Song Del Swing (Feat. Diter Hans)",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/ineditos-tracks-06.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Si-t-k-e (Feat. Mista Mono)",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/ineditos-tracks-07.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Traision Tortilla Vol. 2 (Feat. Bubaseta)",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/ineditos-tracks-08.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Le Pisaste La Cola Al Mandingas (Feat. Tonijua)",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/ineditos-tracks-09.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Te Gusta Y Te Asusta (Feat. Mc Solo)",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/ineditos-tracks-10.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Frenandolos (Feat. Diter Hans)",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/ineditos-tracks-11.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Under Control 2 (Feat. Nicro, Predicto, Rolo, Pedro Santo , Tha Droga)",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/ineditos-tracks-12.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Me Kai Bien (Feat. Retako Lopez)",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/ineditos-tracks-13.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Vamo A Muerte (Feat. Tonijua)",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/ineditos-tracks-14.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "2 Peso Pesao (Feat. Fantasma)",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/ineditos-tracks-15.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Para (Feat. Fmc Y Los Solistas)",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/ineditos-tracks-16.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Media Gangsta (Feat. Sagaz Y Predixto)",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/ineditos-tracks-17.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        }
+      ],
+      "genre": "Hip-Hop / Rap",
+      "label": "",
+      "producer": "",
+      "location": "Villa Alemana, Chile",
+      "downloadUrl": "",
+      "downloadFormat": "",
+      "downloadEnabled": false,
+      "downloadInfo": "",
+      "rights": "",
+      "bandcamp": "",
+      "youtube": "",
+      "soundcloud": ""
+    },
+    {
+      "id": "drama-records",
+      "title": "Con Emci Solo Drama Records",
+      "year": "2006",
+      "date": "1 de enero de 2006",
+      "type": "Álbum",
+      "cover": "assets/images/cover-drama-records.jpg",
+      "description": "Trabajo de FMOH junto a emci Solo, publicado en 2006.",
+      "credits": "",
+      "spotify": "",
+      "apple": "https://music.apple.com/es/album/con-emci-solo-drama-records-feat-emci-solo/1584148734",
+      "tracks": [
+        {
+          "title": "Intro Vol. 1",
+          "duration": "",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/drama-records-01.mp3",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Nada A Cambiado (Feat. Emci Solo)",
+          "duration": "3:59",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/drama-records-02.mp3",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Andate Reina (Feat. Emci Solo)",
+          "duration": "3:22",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/drama-records-03.mp3",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Julieta (Feat. Emci Solo)",
+          "duration": "4:15",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/drama-records-04.mp3",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Protagonistas Del Drama (Feat. Emci Solo)",
+          "duration": "3:09",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/drama-records-05.mp3",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Muchachita De Team (Feat. Emci Solo)",
+          "duration": "2:56",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/drama-records-06.mp3",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Segundo Golpe (Feat. Emci Solo)",
+          "duration": "3:20",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/drama-records-07.mp3",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Tú (Feat. Emci Solo)",
+          "duration": "4:04",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/drama-records-08.mp3",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Ya Es Tarde (Feat. Emci Solo)",
+          "duration": "4:11",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/drama-records-09.mp3",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        }
+      ],
+      "genre": "Hip-Hop / Rap",
+      "label": "",
+      "producer": "",
+      "location": "Villa Alemana, Chile",
+      "downloadUrl": "",
+      "downloadFormat": "",
+      "downloadEnabled": false,
+      "downloadInfo": "",
+      "rights": "",
+      "bandcamp": "",
+      "youtube": "",
+      "soundcloud": ""
+    },
+    {
+      "id": "los-feos-con-estilo-musical",
+      "title": "Los feos con estilo musical",
+      "year": "2005",
+      "date": "",
+      "type": "Álbum",
+      "cover": "assets/images/cover-los-feos-con-estilo-musical.jpg",
+      "description": "",
+      "credits": "",
+      "spotify": "",
+      "apple": "",
+      "tracks": [
+        {
+          "title": "Pikante  Intro",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/los-feos-con-estilo-musical-01.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Traision Tortilla Vol 1",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/los-feos-con-estilo-musical-02.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "La Pura Santa Verda",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/los-feos-con-estilo-musical-03.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Dele Q Dele",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/los-feos-con-estilo-musical-04.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Regetontos",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/los-feos-con-estilo-musical-05.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Intermedio",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/los-feos-con-estilo-musical-06.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Fenomeno Humano",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/los-feos-con-estilo-musical-07.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Matando Las Pasiones",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/los-feos-con-estilo-musical-08.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Un Par De Botellas",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/los-feos-con-estilo-musical-09.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Manito De Gato",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/los-feos-con-estilo-musical-10.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        }
+      ],
+      "genre": "Hip-Hop / Rap",
+      "label": "",
+      "producer": "",
+      "location": "Villa Alemana, Chile",
+      "downloadUrl": "",
+      "downloadFormat": "",
+      "downloadEnabled": false,
+      "downloadInfo": "",
+      "rights": "",
+      "bandcamp": "",
+      "youtube": "",
+      "soundcloud": ""
+    },
+    {
+      "id": "k-nabis",
+      "title": "K-ñabis",
+      "year": "2004",
+      "date": "22 de octubre de 2004",
+      "type": "Álbum",
+      "cover": "assets/images/cover-k-nabis.jpg",
+      "description": "",
+      "credits": "",
+      "spotify": "",
+      "apple": "https://music.apple.com/br/album/k-%C3%B1abis/1652890092",
+      "tracks": [
+        {
+          "title": "El Q La Hace La Paga (Con Rstko)",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/k-nabis-01.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Asi De Simple (Con Vanela)",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/k-nabis-02.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "La Materia Griz",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/k-nabis-03.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Hip-hop (Con Mista Mono)",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/k-nabis-04.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Musika De Verda! (Con Rottweiler)",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/k-nabis-05.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Ser O No Ser (Con Mista Mono)",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/k-nabis-06.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Mucha Diferencia",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/k-nabis-07.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "K-ñabis",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/k-nabis-08.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Todo Tiene Resultado (Con R.h.)",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/k-nabis-09.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Irremediables",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/k-nabis-10.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Nueva Era (Con Tonimesquad)",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/k-nabis-11.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Nada Hace Nada Tiene (Con Jar Y Rstko)",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/k-nabis-12.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "A Cuidar La Kultura (Con Sgz)",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/k-nabis-13.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "B.j.a.",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/k-nabis-14.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Ra Pa Todos (Con Linco)",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/k-nabis-15.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        },
+        {
+          "title": "Improbisasiones (Con Chinobiz)",
+          "audio": "https://github.com/PekaOS-Pro/FMOH-WEB/releases/download/audio-v1/k-nabis-16.mp3",
+          "duration": "",
+          "featuring": "",
+          "producer": "",
+          "downloadEnabled": false
+        }
+      ],
+      "genre": "Hip-Hop / Rap",
+      "label": "",
+      "producer": "",
+      "location": "Villa Alemana, Chile",
+      "downloadUrl": "",
+      "downloadFormat": "",
+      "downloadEnabled": false,
+      "downloadInfo": "",
+      "rights": "",
+      "bandcamp": "",
+      "youtube": "",
+      "soundcloud": ""
+    }
+  ],
+  "singles": [
+    {
+      "title": "Rememba",
+      "year": "2026",
+      "link": "https://youtu.be/shND-yogqJA?si=fmjX8WIWdrEsfHpI"
+    },
+    {
+      "title": "No colgar jamás los guantes",
+      "year": "2023",
+      "link": "https://youtu.be/cLveTzsD05M?si=-fGrDoSytojswsSI"
+    },
+    {
+      "title": "Dembox",
+      "year": "2022",
+      "link": "https://youtu.be/lzBPWBArQoI?si=jkSWRDyDEFCGWt0q"
+    },
+    {
+      "title": "Valora (feat. Deejay Lalo)",
+      "year": "2022",
+      "link": "https://youtu.be/eH-628KGElk?si=JWsvF2dOuwqnsxP5"
+    },
+    {
+      "title": "Perpetuo",
+      "year": "2022",
+      "link": "https://youtu.be/SfoUmOczQ7c?si=yjh-vbRSD_bJ0MAI"
+    },
+    {
+      "title": "Nunca es tarde (feat. El Reaktor)",
+      "year": "2021",
+      "link": "https://youtu.be/qKSd_1EWNWA?si=ceAHJJw3vtQtOetU"
+    },
+    {
+      "title": "Así Se Baila el Tango (feat. Miguel Di San Maldito)",
+      "year": "2019",
+      "link": "https://youtu.be/E2bFN3iEC68?si=KzQa9hY6lqm7gy8I"
+    },
+    {
+      "title": "Difícil Love (feat. Phillip Tyrer)",
+      "year": "2018",
+      "link": "https://youtu.be/c1droMxlAZg?si=UQnXM132y-rnm4Ja"
+    }
+  ],
+  "catalogRevision": "local-audio-2026-11",
+  "singlesRevision": "youtube-videos-1",
+  "downloadsRevision": "github-pages-external-downloads-1",
+  "albumTextRevision": "villa-alemana-track-titles-1",
+  "socialRevision": "artist-social-links-1"
+};
